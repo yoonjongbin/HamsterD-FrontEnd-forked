@@ -5,16 +5,8 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useState, useEffect } from "react";
 
- 
-
-const Header = () => {
-
-    return(
-
-
-     <h1>ss</h1>    
-    
-    );
+const Sidebar = () => {
+  return <h1>sidebar</h1>;
 };
 
-export default Header;
+export default Sidebar;
