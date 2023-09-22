@@ -96,7 +96,7 @@ const Header = () => {
   return (
     <Test>
       <div className="header-section">
-        <div className="header"  id="logo">
+        <div id="logo">
           <img className="logoimg" src={logo} alt="Logo" />
         </div>
         <div className="header">
@@ -104,7 +104,7 @@ const Header = () => {
             <div className="submenu1">
               <a href="#">마이 페이지</a>
             </div>
-            <div className="submenu2">
+            <div className="submenu">
               <a href="#">마이페이지</a>
               <a href="#">개인정보수정</a>
               <a href="#">탈퇴</a>
@@ -114,7 +114,7 @@ const Header = () => {
             <div className="submenu1">
               <a href="#">게시판</a>
             </div>
-            <div className="submenu2">
+            <div className="submenu">
               <a href="#">서브메뉴 1</a>
               <a href="#">서브메뉴 2</a>
               <a href="#">서브메뉴 3</a>
@@ -124,7 +124,7 @@ const Header = () => {
             <div className="submenu1">
               <a href="#">스터디</a>
             </div>
-            <div className="submenu2">
+            <div className="submenu">
               <a href="#">랭킹</a>
               <a href="#">스터디그룹 조회</a>
               <a href="#">스터디 만들기</a>
@@ -134,7 +134,7 @@ const Header = () => {
             <div className="submenu1">
               <a href="#">소셜</a>
             </div>
-            <div className="submenu2">
+            <div className="submenu">
               <a href="#">서브메뉴 1</a>
               <a href="#">서브메뉴 2</a>
               <a href="#">서브메뉴 3</a>
