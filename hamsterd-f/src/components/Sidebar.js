@@ -1,3 +1,4 @@
+import logo from "../resource/로고안경2.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
@@ -283,6 +284,7 @@ const Test2 = styled.div`
   }
 
   #section3 {
+    margin-top: 200px;
     margin-right: 100px;
     display: flex;
     flex-direction: column;
@@ -308,7 +310,8 @@ const Test2 = styled.div`
     padding-top: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    text-align: center;
   }
 
   .myinfo div {
@@ -321,6 +324,8 @@ const Test2 = styled.div`
     width: 100%;
     height: 50px;
     margin-bottom: 20px;
+    margin-top: 20px;
+    line-height: 45px;
   }
 
   .studysearch {
@@ -339,16 +344,20 @@ const Test2 = styled.div`
 const Sidebar = () => {
   return (
     <Test2>
-      <div class="section" id="section3">
-        <div class="myimg">
-          <img src="resources/로고안경2.png" />
-        </div>
-        <div class="myinfo">
-          <div class="mystudy">내 스터디</div>
-          <div class="myweight">내 몸무게</div>
-          <div class="mycalender">내 일정</div>
-          <div class="mypost">내 게시글</div>
-          <div class="mycomment">내 댓글</div>
+      <div className="main-page">
+        <div className="main-section">
+          <div className="section" id="section3">
+            <div className="myimg">
+              <img className="logoimg" src={logo} alt="Logo" />
+            </div>
+            <div className="myinfo">
+              <div className="mystudy">내 스터디</div>
+              <div className="myweight">내 몸무게</div>
+              <div className="mycalender">내 일정</div>
+              <div className="mypost">내 게시글</div>
+              <div className="mycomment">내 댓글</div>
+            </div>
+          </div>
         </div>
       </div>
     </Test2>
