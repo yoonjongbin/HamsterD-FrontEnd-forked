@@ -284,7 +284,7 @@ const Test2 = styled.div`
   }
 
   #section3 {
-    margin-top: 200px;
+    margin-top: 30px;
     margin-right: 100px;
     display: flex;
     flex-direction: column;
