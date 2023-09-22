@@ -11,7 +11,7 @@ import logo from "../resource/logo.jpg";
 const Test = styled.div`
   .header-section {
     display: flex;
-    margin-top: 40px;
+    
     width: 100%;
     height: 120px;
   }
@@ -57,7 +57,7 @@ const Test = styled.div`
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding-top: 70px;
+    
   }
 
   .submenu {
@@ -76,20 +76,15 @@ const Test = styled.div`
 .header:hover .submenu {
   visibility: inherit;
   justify-content: space-around;
-  margin-top: 30px;
+  
 }
 .header:hover .menu {
-  padding-top: 0px;
+ 
 }
 @keyframes animation {
   100% {
-    background: #ECE6CC;
-    height: 300px;
-    align-items: normal;
-    padding-top: 50px;
-    border-radius: 10px;
-    font-weight: bolder;
-    z-index: 1;
+ 
+  
   }
 }
 `;
@@ -101,7 +96,8 @@ const Header = () => {
         <div id="logo">
           <img className="logoimg" src={logo} alt="Logo" />
         </div>
-        <div className="header">
+        <div className="realheader">
+         <div className="header">
           <div className="menu" id="mypage">
             <div className="submenu1">
               <a href="#">마이 페이지</a>
@@ -141,7 +137,9 @@ const Header = () => {
               <a href="#">서브메뉴 2</a>
               <a href="#">서브메뉴 3</a>
             </div>
+            
           </div>
+        </div>
         </div>
       </div>
     </Test>
