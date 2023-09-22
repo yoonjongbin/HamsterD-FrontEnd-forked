@@ -151,7 +151,7 @@ const Test2 = styled.div`
     margin-right: 20px;
   }
 
-  /* 메인페이지(컨텐츠 부분) */
+  /* 메인페이지(컨텐츠부분) */
   #section2 {
     width: 60%;
     min-width: 900px;
