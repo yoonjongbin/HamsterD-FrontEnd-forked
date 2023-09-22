@@ -4,13 +4,14 @@ import styled from "styled-components";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useState, useEffect } from "react";
-import logo from "../resource/logo.png"
+import logo from "../resource/logo.jpg";
 
 
 
 const Test = styled.div`
   .header-section {
     display: flex;
+    margin-top: 40px;
     width: 100%;
     height: 120px;
   }
@@ -18,6 +19,7 @@ const Test = styled.div`
   .header {
     display: flex;
     align-items: center;
+    margin-top: 60px;
   }
 
   #logo {
@@ -29,9 +31,9 @@ const Test = styled.div`
   }
 
   #logo img {
-    width: 250px;
-    left: 29px;
-    top: -10px;
+    width: 350px;
+
+    margin-left: -150px;
   }
 
   .header {
