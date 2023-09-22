@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useState, useEffect } from "react";
+import logo from "../resource/logo.png"
 
 
 
@@ -95,8 +96,8 @@ const Header = () => {
   return (
     <Test>
       <div className="header-section">
-        <div className="header" id="logo">
-          <img className="logoimg" src="./src/resource/logo.png" alt="Logo" />
+        <div className="header"  id="logo">
+          <img className="logoimg" src={logo} alt="Logo" />
         </div>
         <div className="header">
           <div className="menu" id="mypage">
