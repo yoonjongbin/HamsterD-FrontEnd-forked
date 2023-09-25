@@ -1,21 +1,8 @@
 import logo from "../resource/로고안경2.png";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container } from "react-bootstrap";
 import styled from "styled-components";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import { useState, useEffect } from "react";
 
 const Test2 = styled.div`
-  /* 전체 페이지 설정 */
-  .main-page {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: var(--grey-blue-60, #6b7a99);
-  }
-
   /* 로고영역 */
   #logo {
     width: 300px;
@@ -31,14 +18,6 @@ const Test2 = styled.div`
     left: 29px;
     top: -10px;
   }
-
-  /* 하단 메인페이지 */
-  .main-section {
-    display: flex;
-    width: 100%;
-    height: 900px;
-  }
-
   .section {
     border: 1px solid var(--grey-blue-95, #edeff2);
     border-radius: 20px;
@@ -51,28 +30,13 @@ const Test2 = styled.div`
     padding: 30px;
   }
 
-  /* 좌, 우 메뉴 */
+  /*사이드바 */
   #section3 {
-    width: 200px;
+    width: 0px;
     min-width: 200px;
     display: flex;
-  }
-
-  /* 메인페이지(컨텐츠부분) */
-  #section2 {
-    width: 60%;
-    min-width: 900px;
-    max-width: 1200px;
-    margin-right: 50px;
-    display: flex;
     flex-direction: column;
-  }
-
-  #section3 {
-    margin-top: 30px;
-    margin-right: 100px;
-    display: flex;
-    flex-direction: column;
+    margin: 30px 100px 0 50px;
   }
 
   .myimg {
