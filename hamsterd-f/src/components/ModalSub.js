@@ -45,7 +45,7 @@ position: relative;
 `;
 
 
-function ModalSub() {
+function ModalSub() {2
   return (
 
     <Modal isOpen={true} style={customStyles} contentLabel="modal" >
