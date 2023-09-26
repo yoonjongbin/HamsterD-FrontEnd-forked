@@ -2,6 +2,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import styled from "styled-components";
 import logo from "../resource/logo.jpg";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import ModalSub from "../components/ModalSub";
+import Modal from 'react-modal';
 
 const Test = styled.div`
   .header-section {
@@ -79,15 +81,36 @@ const Test = styled.div`
   }
 `;
 
+const Sub = styled.div`
+
+
+`;
+
 const Header = () => {
   return (
-    <Test>
+  
+     
+   <Test>
+
+
+      <Sub>
+
+       <div>
+         
+       <ModalSub/> 
+
+       </div>    
+          
+
+
+      </Sub>
+  
       <div className="header-section">
         <div id="logo">
           <img className="logoimg" src={logo} alt="Logo" />
         </div>
         <div className="realheader">
-          <div className="header">
+          <div className="header">  
             <div className="menu" id="mypage">
               <div className="submenu1">
                 <Link to="/mypage">마이 페이지</Link>
@@ -131,6 +154,8 @@ const Header = () => {
         </div>
       </div>
     </Test>
+
+
   );
 };
 
