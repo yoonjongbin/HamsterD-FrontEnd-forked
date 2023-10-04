@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import styled from "styled-components";
-
+import { useNavigate } from "react-router-dom";
 
 
 const customStyles = {
@@ -84,6 +84,7 @@ function ModalSub() {
     setIsOpen(false);
   };
 
+ 
   return (
     <Modal isOpen={isOpen} style={customStyles} contentLabel="modal">
       <StyleTest>
