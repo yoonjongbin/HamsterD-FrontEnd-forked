@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "react-modal";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
@@ -25,8 +25,22 @@ const StyleTest = styled.div`
     align-items: center;
     flex-direction: column;
     height: 400px;
-    position: relative;
     font-family: "EliceDx";
+  }
+  .set {
+    width: 200px;
+    height: 32px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    background-color: rgb(233, 233, 233);
+  }
+
+  @font-face {
+    font-family: "EliceDx";
+    font-weight: 100;
+    src: url("../src/font/EliceDXNeolli-Bold.ttf") format("truetype");
   }
 
   .set {
@@ -52,51 +66,66 @@ const StyleTest = styled.div`
   #signUpbtn {
     margin-left: 50px;
   }
+
+  .setControll {
+  }
+
+  .closebtn {
+    position: relative;
+    margin-left: 400px;
+    margin-top: -40px;
+  }
 `;
 
 function ModalSub() {
-  const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(true);
 
-  const navigateToSignUp = () => {
-    navigate("/signup");
+  const closeTab = () => {
+    setIsOpen(false);
   };
 
   return (
-    <Modal isOpen={true} style={customStyles} contentLabel="modal">
+    <Modal isOpen={isOpen} style={customStyles} contentLabel="modal">
       <StyleTest>
         <div className="mainModal">
           <br></br>
-          <h3>HamsterD</h3> <br></br>
-          <form className="innerModal">
-            <input
-              className="set"
-              type="text"
-              placeholder="  아이디를 입력하세요.."
-            ></input>
-            <br></br> <br></br>
-            <input
-              className="set"
-              type="text"
-              placeholder="  비밀번호를 입력하세요.."
-            ></input>
-            <br></br>
-            <br></br>
-            <button type="button" id="loginbtn" className="btn btn-primary">
-              로그인
-            </button>{" "}
-            <br></br> <br></br>
-            <br></br>
-            <br></br>
-            <h4>아직 비회원이세요?</h4>
-            <br></br>
+          <h3>HamsterD</h3>
+          <div className="closebtn">
             <button
+              onClick={closeTab}
               type="button"
-              id="signUpbtn"
-              className="btn btn-danger"
-              onClick={navigateToSignUp}
-            >
-              회원가입
-            </button>
+              className="btn-close"
+              aria-label="Close"
+            ></button>
+          </div>
+          <br></br>
+          <form className="innerModal">
+            <div className="setControll">
+              <input
+                className="set"
+                type="text"
+                placeholder="  아이디를 입력하세요.."
+              ></input>
+              <br></br> <br></br>
+              <input
+                className="set"
+                type="text"
+                placeholder="  비밀번호를 입력하세요.."
+              ></input>
+              <br></br>
+              <br></br>
+              <button type="button" id="loginbtn" className="btn btn-primary">
+                로그인
+              </button>
+              <br></br> <br></br>
+              <br></br>
+              <br></br>
+              <h4>아직 비회원이세요?</h4>
+              <br></br>
+              <button type="button" id="signUpbtn" className="btn btn-danger">
+                회원가입
+              </button>
+            </div>
           </form>
         </div>
       </StyleTest>
