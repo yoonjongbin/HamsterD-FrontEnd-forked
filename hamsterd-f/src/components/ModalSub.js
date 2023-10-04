@@ -26,8 +26,10 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-height: 200px;
+height: 400px;
 position: relative;
+font-family:"EliceDx" 
+
 
 }
 
@@ -42,6 +44,23 @@ position: relative;
   background-color: rgb(233, 233, 233);
   
 }
+
+@font-face {
+  font-family: "EliceDx";
+  font-weight: 100;
+  src: url("../src/font/EliceDXNeolli-Bold.ttf") format("truetype");
+}
+
+#loginbtn{
+
+  margin-left: 60px;
+}
+
+#signUpbtn{
+
+  margin-left: 50px;
+}
+
 `;
 
 
@@ -53,14 +72,15 @@ function ModalSub() {
       <div className="mainModal">
 
       <br></br>
-      <h3>로그인</h3> <br></br>
-       <form>
-       <input className="set" type="text" placeholder="아이디를 입력하세요.."></input>
+      <h3>HamsterD</h3> <br></br>
+       <form className="innerModal">
+       <input className="set" type="text" placeholder="  아이디를 입력하세요.."></input>
        <br></br> <br></br>
-       <input className="set" type="text" placeholder="비밀번호를 입력하세요.."></input>
+       <input className="set" type="text" placeholder="  비밀번호를 입력하세요.."></input>
        <br></br><br></br>
-       <button  type="button"  className="btn btn-primary">로그인</button> 
-       <button style={{marginLeft:"20px"}} type="button"  className="btn btn-danger">회원가입</button>
+       <button  type="button" id="loginbtn" className="btn btn-primary">로그인</button>  <br></br> <br></br><br></br><br></br>
+       <h4>아직 비회원이세요?</h4><br></br>
+       <button  type="button" id="signUpbtn" className="btn btn-danger">회원가입</button>
        </form>
       
       </div>
