@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "react-modal";
 import styled from "styled-components";
+
+
 
 const customStyles = {
   overlay: {
@@ -27,14 +29,14 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 height: 400px;
-position: relative;
-font-family:"EliceDx" 
+font-family:"EliceDx";
+
 
 
 }
 
 .set{
-  
+
   width: 200px;
   height: 32px;
   font-size: 15px;
@@ -61,34 +63,50 @@ font-family:"EliceDx"
   margin-left: 50px;
 }
 
+
+.setControll{
+
+
+}
+
+.closebtn{
+  position: relative;
+  margin-left: 400px;
+  margin-top: -40px;
+}
 `;
 
 
 function ModalSub() {
+  const [isOpen, setIsOpen] = useState(true);
+
+  const closeTab = () => {
+    setIsOpen(false);
+  };
+
   return (
-
-    <Modal isOpen={true} style={customStyles} contentLabel="modal" >
-       <StyleTest>
-      <div className="mainModal">
-
-      <br></br>
-      <h3>HamsterD</h3> <br></br>
-       <form className="innerModal">
-       <input className="set" type="text" placeholder="  아이디를 입력하세요.."></input>
-       <br></br> <br></br>
-       <input className="set" type="text" placeholder="  비밀번호를 입력하세요.."></input>
-       <br></br><br></br>
-       <button  type="button" id="loginbtn" className="btn btn-primary">로그인</button>  <br></br> <br></br><br></br><br></br>
-       <h4>아직 비회원이세요?</h4><br></br>
-       <button  type="button" id="signUpbtn" className="btn btn-danger">회원가입</button>
-       </form>
-      
-      </div>
-      
-      
-      
-      
-      
+    <Modal isOpen={isOpen} style={customStyles} contentLabel="modal">
+      <StyleTest>
+        <div className="mainModal">
+          <br></br>
+          <h3>HamsterD</h3>
+          <div className="closebtn">
+            <button onClick={closeTab} type="button" className="btn-close" aria-label="Close"></button>
+          </div>
+          <br></br>
+          <form className="innerModal">
+            <div className="setControll">
+              <input className="set" type="text" placeholder="  아이디를 입력하세요.."></input>
+              <br></br> <br></br>
+              <input className="set" type="text" placeholder="  비밀번호를 입력하세요.."></input>
+              <br></br><br></br>
+              <button type="button" id="loginbtn" className="btn btn-primary" >로그인</button>
+              <br></br> <br></br><br></br><br></br>
+              <h4>아직 비회원이세요?</h4><br></br>
+              <button type="button" id="signUpbtn" className="btn btn-danger" >회원가입</button>
+            </div>
+          </form>
+        </div>
       </StyleTest>
     </Modal>
   );
