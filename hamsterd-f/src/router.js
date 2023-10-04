@@ -8,6 +8,7 @@ import StudyGroup from "./pages/studygroup/StudyGroup";
 import Social from "./pages/social/Social";
 import Schedule from "./pages/studygroup/Schedule";
 import GroupEval from "./pages/studygroup/GroupEval";
+import SignUp from "./pages/member/SignUp";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: "/groupeval",
         element: <GroupEval />,
+      },
+      {
+        path: "/signup",
+        element: <SignUp />,
       },
     ],
   },
