@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import Modal from "react-modal";
 import styled from "styled-components";
@@ -17,8 +16,6 @@ const customStyles = {
     width: "500px",
     height: "500px",
   },
-
-
 };
 
 const StyleTest = styled.div`
@@ -82,8 +79,20 @@ const StyleTest = styled.div`
 
 function ModalSub() {
   const [isOpen, setIsOpen] = useState(true);
+  const navigate = useNavigate();
 
   const closeTab = () => {
+    setIsOpen(false);
+  };
+
+  const handleLoginClick = () => {
+    // 로그인 버튼 클릭 시 '/login' 경로로 이동
+    navigate("/login");
+  };
+
+  const handleSignUpClick = () => {
+    // 회원가입 버튼 클릭 시 '/signup' 경로로 이동
+    navigate("/signup");
     setIsOpen(false);
   };
 
@@ -117,7 +126,12 @@ function ModalSub() {
               ></input>
               <br></br>
               <br></br>
-              <button type="button" id="loginbtn" className="btn btn-primary">
+              <button
+                type="button"
+                id="loginbtn"
+                className="btn btn-primary"
+                onClick={handleLoginClick}
+              >
                 로그인
               </button>
               <br></br> <br></br>
@@ -125,7 +139,12 @@ function ModalSub() {
               <br></br>
               <h4>아직 비회원이세요?</h4>
               <br></br>
-              <button type="button" id="signUpbtn" className="btn btn-danger">
+              <button
+                type="button"
+                id="signUpbtn"
+                className="btn btn-danger"
+                onClick={handleSignUpClick}
+              >
                 회원가입
               </button>
             </div>

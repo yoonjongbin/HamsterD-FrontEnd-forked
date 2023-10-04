@@ -1,4 +1,3 @@
-
 import logo from "../resource/로고안경2.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styled from "styled-components";
@@ -18,7 +17,7 @@ const Test2 = styled.div`
     width: 250px;
     left: 29px;
     top: -10px;
-  }//
+  } //
   .section {
     border: 1px solid var(--grey-blue-95, #edeff2);
     border-radius: 20px;
