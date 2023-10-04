@@ -1,7 +1,9 @@
+
 import styled from "styled-components";
+
 const SignUpStyle = styled.div`
   .mainsection {
-    border: 1px solid var(--grey-blue-95, #EDEFF2);
+    border: 1px solid var(--grey-blue-95, #edeff2);
     border-radius: 20px;
     width: 1600px;
     margin-top: 30px;
@@ -17,6 +19,7 @@ const SignUpStyle = styled.div`
     height: 1000px;
   }
 `;
+
 const SignUp = () => {
   return (
     <SignUpStyle>
@@ -44,6 +47,7 @@ const SignUp = () => {
                 </button>
               </div>
             </div>
+
             <div className="mb-3">
               <label htmlFor="inputPassword6" className="form-label">
                 비밀번호
@@ -59,6 +63,7 @@ const SignUp = () => {
                 8-20자의 비밀번호를 입력하세요.
               </span>
             </div>
+
             <div className="mb-3">
               <label htmlFor="inputPassword6" className="form-label">
                 비밀번호 확인
@@ -74,6 +79,7 @@ const SignUp = () => {
                 8-20자의 비밀번호를 입력하세요.
               </span>
             </div>
+
             <div className="mb-3">
               <label htmlFor="inputPassword6" className="form-label">
                 이름
@@ -86,6 +92,7 @@ const SignUp = () => {
                 required
               />
             </div>
+
             <div className="mb-3">
               <label htmlFor="inputPassword6" className="form-label">
                 생일
@@ -97,6 +104,7 @@ const SignUp = () => {
                 required
               />
             </div>
+
             <div className="mb-3">
               <label className="form-label">성별</label>
               <div className="form-check">
@@ -123,6 +131,7 @@ const SignUp = () => {
                 </label>
               </div>
             </div>
+
             <div className="mb-3">
               <label htmlFor="inputPassword6" className="form-label">
                 전화번호
@@ -138,6 +147,7 @@ const SignUp = () => {
                 -없이 번호만 입력해 주세요
               </span>
             </div>
+
             <div className="mb-3">
               <label htmlFor="inputPassword6" className="form-label">
                 학원 이름
@@ -153,6 +163,7 @@ const SignUp = () => {
                 현재 다니고 계신 학원 명을 입력해 주세요
               </span>
             </div>
+
             <div className="mb-3">
               <label htmlFor="inputPassword6" className="form-label">
                 주소
@@ -168,6 +179,7 @@ const SignUp = () => {
                 상세주소를 입력해 주세요
               </span>
             </div>
+
             <button type="button" id="signupbtn" className="btn btn-primary">
               회원가입
             </button>
@@ -177,16 +189,5 @@ const SignUp = () => {
     </SignUpStyle>
   );
 };
+
 export default SignUp;
-
-
-
-
-
-
-
-
-
-
-
-
