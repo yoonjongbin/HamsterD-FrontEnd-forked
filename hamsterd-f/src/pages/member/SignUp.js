@@ -21,26 +21,43 @@ const SignUpStyle = styled.div`
 `;
 
 const SignUp = () => {
+  const convertToDate = (dateString) => {
+    const date = new Date(dateString);
+    return date;
+  };
 
-   const handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    const idValue = e.target.elements.id.value;  //아이디
-    const passwordValue = e.target.elements.password.value;  //비번
-    const nameValue = e.target.elements. name.value;  //이름
-    const birthValue = e.target.elements.birth.value;  //생일
-    const genderValue = e.target.elements.gender.value;  //성별
-    const phoneValue = e.target.elements.phone.value;  //전화번호
-    const addressValue = e.target.elements.address.value;  //주소
-    
-    addMember(formData);
-    
-   console.log("회원가입 폼 데이터: ", { 
-    idValue,passwordValue,nameValue,birthValue,genderValue,phoneValue,addressValue
-     
-   });
+    // const idValue = e.target.elements.id.value; //아이디
+    // const passwordValue = e.target.elements.password.value; //비번
+    // const nameValue = e.target.elements.name.value; //이름
+    // const birthValue = e.target.elements.birth.value; //생일
+    // const genderValue = e.target.elements.gender.value; //성별
+    // const phoneValue = e.target.elements.phone.value; //전화번호
+    // const addressValue = e.target.elements.address.value; //주소
 
-   };
+    // formData.append("id", idValue);
+    // formData.append("password", passwordValue);
+    // formData.append("name", nameValue);
+    // formData.append("birth", birthValue);
+    // formData.append("gender", genderValue);
+    // formData.append("phone", phoneValue);
+    // formData.append("addr", addressValue);
+
+    formData.set("birth", convertToDate(formData.get("birth")));
+    addMember(formData);
+
+    // console.log("birth: " + formData.get("birth"));
+
+    // for (let key of formData.keys()) {
+    //   console.log(key);
+    // }
+
+    // for (let value of formData.values()) {
+    //   console.log(value);
+    // }
+  };
 
   return (
     <SignUpStyle>
@@ -139,7 +156,6 @@ const SignUp = () => {
                   name="gender"
                   id="flexRadioDefault1"
                   value="man"
-                  
                 />
                 <label className="form-check-label" htmlFor="flexRadioDefault1">
                   남자
@@ -153,7 +169,6 @@ const SignUp = () => {
                   value="woman"
                   id="flexRadioDefault2"
                   checked
-                 
                 />
                 <label className="form-check-label" htmlFor="flexRadioDefault2">
                   여자
@@ -188,7 +203,7 @@ const SignUp = () => {
                 className="form-control"
                 aria-describedby="passwordHelpInline"
                 required
-                name="academy"
+                name="academyName"
               />
               <span id="passwordHelpInline" className="form-text">
                 현재 다니고 계신 학원 명을 입력해 주세요
