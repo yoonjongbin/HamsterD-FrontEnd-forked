@@ -1,5 +1,6 @@
 
 import styled from "styled-components";
+import { addMember } from "../../api/signup";
 
 const SignUpStyle = styled.div`
   .mainsection {
@@ -21,11 +22,32 @@ const SignUpStyle = styled.div`
 `;
 
 const SignUp = () => {
+
+   const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const idValue = e.target.elements.id.value;  //아이디
+    const passwordValue = e.target.elements.password.value;  //비번
+    const nameValue = e.target.elements. name.value;  //이름
+    const birthValue = e.target.elements.birth.value;  //생일
+    const genderValue = e.target.elements.gender.value;  //성별
+    const phoneValue = e.target.elements.phone.value;  //전화번호
+    const addressValue = e.target.elements.address.value;  //주소
+    
+    addMember(formData);
+    
+   console.log("회원가입 폼 데이터: ", { 
+    idValue,passwordValue,nameValue,birthValue,genderValue,phoneValue,addressValue
+     
+   });
+
+   };
+
   return (
     <SignUpStyle>
       <div className="mainsection">
         <div className="section" id="section2">
-          <form className="signup">
+          <form className="signup" onSubmit={handleSubmit}>
             <div className="mb-3">
               <label htmlFor="inputPassword6" className="form-label">
                 아이디
@@ -36,6 +58,7 @@ const SignUp = () => {
                   id="inputPassword6"
                   className="form-control"
                   aria-describedby="passwordHelpInline"
+                  name="id"
                   required
                 />
                 <button
@@ -58,6 +81,7 @@ const SignUp = () => {
                 className="form-control"
                 aria-describedby="passwordHelpInline"
                 required
+                name="password"
               />
               <span id="passwordHelpInline" className="form-text">
                 8-20자의 비밀번호를 입력하세요.
@@ -90,6 +114,7 @@ const SignUp = () => {
                 className="form-control"
                 aria-describedby="passwordHelpInline"
                 required
+                name="name"
               />
             </div>
 
@@ -102,6 +127,7 @@ const SignUp = () => {
                 type="date"
                 placeholder="생일"
                 required
+                name="birth"
               />
             </div>
 
@@ -111,8 +137,10 @@ const SignUp = () => {
                 <input
                   className="form-check-input"
                   type="radio"
-                  name="flexRadioDefault"
+                  name="gender"
                   id="flexRadioDefault1"
+                  value="man"
+                  
                 />
                 <label className="form-check-label" htmlFor="flexRadioDefault1">
                   남자
@@ -122,9 +150,11 @@ const SignUp = () => {
                 <input
                   className="form-check-input"
                   type="radio"
-                  name="flexRadioDefault"
+                  name="gender"
+                  value="woman"
                   id="flexRadioDefault2"
                   checked
+                 
                 />
                 <label className="form-check-label" htmlFor="flexRadioDefault2">
                   여자
@@ -142,6 +172,7 @@ const SignUp = () => {
                 className="form-control"
                 aria-describedby="passwordHelpInline"
                 required
+                name="phone"
               />
               <span id="passwordHelpInline" className="form-text">
                 -없이 번호만 입력해 주세요
@@ -158,6 +189,7 @@ const SignUp = () => {
                 className="form-control"
                 aria-describedby="passwordHelpInline"
                 required
+                name="academy"
               />
               <span id="passwordHelpInline" className="form-text">
                 현재 다니고 계신 학원 명을 입력해 주세요
@@ -174,13 +206,14 @@ const SignUp = () => {
                 className="form-control"
                 aria-describedby="passwordHelpInline"
                 required
+                name="address"
               />
               <span id="passwordHelpInline" className="form-text">
                 상세주소를 입력해 주세요
               </span>
             </div>
 
-            <button type="button" id="signupbtn" className="btn btn-primary">
+            <button type="submit" id="signupbtn" className="btn btn-primary">
               회원가입
             </button>
           </form>
