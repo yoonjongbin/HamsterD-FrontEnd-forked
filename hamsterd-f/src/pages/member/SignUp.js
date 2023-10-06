@@ -89,6 +89,29 @@ const SignUp = () => {
 
             <div className="mb-3">
               <label htmlFor="inputPassword6" className="form-label">
+                닉네임
+              </label>
+              <div className="input-group">
+                <input
+                  type="text"
+                  id="inputPassword6"
+                  className="form-control"
+                  aria-describedby="passwordHelpInline"
+                  name="nickname"
+                  required
+                />
+                <button
+                  type="button"
+                  id="signupbtn"
+                  className="btn btn-primary"
+                >
+                  중복확인
+                </button>
+              </div>
+            </div>
+
+            <div className="mb-3">
+              <label htmlFor="inputPassword6" className="form-label">
                 비밀번호
               </label>
               <input
