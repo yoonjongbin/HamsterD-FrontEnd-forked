@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import styled from "styled-components";
-import logo from "../resource/logo.jpg";
+import logo from "../resource/logo.JPG";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import ModalSub from "../components/ModalSub";
 import Modal from "react-modal";
@@ -8,7 +8,6 @@ import Modal from "react-modal";
 const Test = styled.div`
   .header-section {
     display: flex;
-
     width: 100%;
     height: 120px;
   }
@@ -16,7 +15,7 @@ const Test = styled.div`
   .header {
     display: flex;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 70px;
     width: 100vw;
     min-width: 1100px;
     max-width: 1500px;
@@ -28,22 +27,28 @@ const Test = styled.div`
   }
 
   #logo {
-    width: 300px;
-    min-width: 300px;
+    width: 400px;
+    min-width: 370px;
     margin-left: 100px;
     display: flex;
     justify-content: center;
+    height: 350px;
+   
   }
 
+  
   #logo img {
-    width: 350px;
+    width: 600px;
 
-    margin-left: -150px;
+    margin-left: -90px;
+    border-radius: 40px;
   }
 
   .menu a {
     text-decoration: none;
-    color: var(--grey-blue-60, #6b7a99);
+    color: rgba(211,157,87);
+    font-family: fantasy;
+    
   }
 
   .menu {
@@ -64,21 +69,22 @@ const Test = styled.div`
     z-index: 2;
   }
 
-  .header:hover {
-    animation: animation 0.1s;
-    animation-fill-mode: forwards;
-  }
-  .header:hover .submenu {
+ 
+  .header:hover 
+  
+  
+  .submenu {
     visibility: inherit;
     justify-content: space-around;
   }
-  .header:hover .menu {
-  }
-  @keyframes animation {
-    100% {
-    }
+
+  
+  
     /* 사이드바 CSS */
-  }
+  
+
+
+   
 `;
 
 const Sub = styled.div``;
@@ -104,7 +110,7 @@ const Header = () => {
               </div>
               <div className="submenu">
                 <a href="#">마이페이지</a>
-                <a href="#">개인정보수정</a>
+                <Link to="/changeinfo">개인정보수정</Link>
                 <a href="#">탈퇴</a>
               </div>
             </div>

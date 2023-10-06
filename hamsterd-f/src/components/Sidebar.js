@@ -1,4 +1,4 @@
-import logo from "../resource/로고안경2.png";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import styled from "styled-components";
 
@@ -19,15 +19,18 @@ const Test2 = styled.div`
     top: -10px;
   } //
   .section {
-    border: 1px solid var(--grey-blue-95, #edeff2);
+    border: 4px solid rgba(211,157,87);
     border-radius: 20px;
     box-shadow: var(
       --shadows-gray-blue-3-5-b-box-shadow,
       0px 2px 5px 0px rgba(38, 51, 77, 0.03)
     );
+   
     height: 700px;
     margin-top: 3px;
     padding: 30px;
+    color: rgba(211,157,87);
+    font-weight: bold;
   }
 
   /*사이드바 */
@@ -64,8 +67,8 @@ const Test2 = styled.div`
   }
 
   .myinfo div {
-    border: 1px solid var(--grey-blue-95, #edeff2);
-    border-radius: 20px;
+    border: 3px solid rgba(211,157,87);
+    border-radius: 10px;
     box-shadow: var(
       --shadows-gray-blue-3-5-b-box-shadow,
       0px 2px 5px 0px rgba(38, 51, 77, 0.03)
@@ -76,6 +79,9 @@ const Test2 = styled.div`
     margin-top: 20px;
     line-height: 45px;
   }
+  .main-page{}
+  width: 600px;
+  margin-top: -10px;
 `;
 
 const Sidebar = () => {
@@ -84,9 +90,7 @@ const Sidebar = () => {
       <div className="main-page">
         <div className="main-section">
           <div className="section" id="section3">
-            <div className="myimg">
-              <img className="logoimg" src={logo} alt="Logo" />
-            </div>
+            
             <div className="myinfo">
               <div className="mystudy">내 스터디</div>
               <div className="myweight">내 몸무게</div>

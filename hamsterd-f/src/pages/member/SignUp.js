@@ -3,10 +3,12 @@ import { addMember } from "../../api/signup";
 
 const SignUpStyle = styled.div`
   .mainsection {
-    border: 1px solid var(--grey-blue-95, #edeff2);
+    border: 1px solid  rgba(211,157,87);;
     border-radius: 20px;
     width: 1600px;
     margin-top: 30px;
+    color: rgba(211,157,87);
+    
   }
   .section {
     box-shadow: var(
