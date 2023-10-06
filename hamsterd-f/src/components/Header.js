@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import styled from "styled-components";
-import logo from "../resource/logo.jpg";
+import logo from "../resource/logo.JPG";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import ModalSub from "../components/ModalSub";
 import Modal from "react-modal";
@@ -27,19 +27,21 @@ const Test = styled.div`
   }
 
   #logo {
-    width: 100px;
-    min-width: 300px;
+    width: 400px;
+    min-width: 370px;
     margin-left: 100px;
     display: flex;
     justify-content: center;
-    height: 280px;
+    height: 350px;
+   
   }
 
   
   #logo img {
-    width: 450px;
+    width: 600px;
 
-    margin-left: -150px;
+    margin-left: -90px;
+    border-radius: 40px;
   }
 
   .menu a {
@@ -67,27 +69,19 @@ const Test = styled.div`
     z-index: 2;
   }
 
-  .header:hover {
-    animation: animation 0.1s;
-    animation-fill-mode: forwards;
-     
-    
-    .menu a {
-      
-    }
-   
-  }
-  .header:hover .submenu {
+ 
+  .header:hover 
+  
+  
+  .submenu {
     visibility: inherit;
     justify-content: space-around;
   }
-  .header:hover .menu {
-  }
-  @keyframes animation {
-    100% {
-    }
+
+  
+  
     /* 사이드바 CSS */
-  }
+  
 
 
    
@@ -116,7 +110,7 @@ const Header = () => {
               </div>
               <div className="submenu">
                 <a href="#">마이페이지</a>
-                <a href="#">개인정보수정</a>
+                <Link to="/changeinfo">개인정보수정</Link>
                 <a href="#">탈퇴</a>
               </div>
             </div>

@@ -9,7 +9,7 @@ import Social from "./pages/social/Social";
 import Schedule from "./pages/studygroup/Schedule";
 import GroupEval from "./pages/studygroup/GroupEval";
 import SignUp from "./pages/member/SignUp";
-
+import ChangeInfo from "./pages/member/ChangeInfo";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -47,6 +47,10 @@ const router = createBrowserRouter([
       {
         path: "/signup",
         element: <SignUp />,
+      },
+      {
+        path: "/changeinfo",
+        element: <ChangeInfo />,
       },
     ],
   },

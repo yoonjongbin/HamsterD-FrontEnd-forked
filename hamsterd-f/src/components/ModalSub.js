@@ -86,15 +86,22 @@ function ModalSub() {
     setIsOpen(false);
   };
 
-  const handleLoginClick = () => {
-    // 로그인 버튼 클릭 시 '/login' 경로로 이동
-    navigate("/login");
-  };
 
   const handleSignUpClick = () => {
     // 회원가입 버튼 클릭 시 '/signup' 경로로 이동
     navigate("/signup");
     setIsOpen(false);
+  };
+
+  const handleSubmit = (e) => {
+    // 로그인 버튼 클릭시 로그인
+    e.preventDefault();
+    const idValue = e.target.elements.id.value;  //아이디
+    const passwordValue = e.target.elements.password.value;  //비번
+    const formData = new FormData(e.target);
+     console.log (idValue,passwordValue);
+    addMember(formData);
+    
   };
 
 
@@ -113,26 +120,28 @@ function ModalSub() {
             ></button>
           </div>
           <br></br>
-          <form className="innerModal">
+          <form className="innerModal" onSubmit={handleSubmit} >
             <div className="setControll">
               <input
                 className="set"
                 type="text"
                 placeholder="  아이디를 입력하세요.."
+                name="id"
               ></input>
               <br></br> <br></br>
               <input
                 className="set"
                 type="text"
                 placeholder="  비밀번호를 입력하세요.."
+                name="password"
               ></input>
               <br></br>
               <br></br>
               <button
-                type="button"
+                type="submit"
                 id="loginbtn"
                 className="btn btn-primary"
-                onClick={handleLoginClick}
+               
               >
                 로그인
               </button>

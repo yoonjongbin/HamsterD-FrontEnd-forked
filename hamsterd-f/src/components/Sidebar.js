@@ -25,6 +25,7 @@ const Test2 = styled.div`
       --shadows-gray-blue-3-5-b-box-shadow,
       0px 2px 5px 0px rgba(38, 51, 77, 0.03)
     );
+   
     height: 700px;
     margin-top: 3px;
     padding: 30px;
@@ -79,8 +80,8 @@ const Test2 = styled.div`
     line-height: 45px;
   }
   .main-page{}
-
-  margin-top: -140px;
+  width: 600px;
+  margin-top: -10px;
 `;
 
 const Sidebar = () => {
