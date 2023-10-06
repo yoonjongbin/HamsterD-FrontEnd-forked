@@ -1,9 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import styled from "styled-components";
-import logo from "../resource/logo.JPG";
+import logo from "../resource/logo.jpg";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import ModalSub from "../components/ModalSub";
-import Modal from "react-modal";
+// import Modal from "react-modal";
 
 const Test = styled.div`
   .header-section {
@@ -33,10 +33,8 @@ const Test = styled.div`
     display: flex;
     justify-content: center;
     height: 350px;
-   
   }
 
-  
   #logo img {
     width: 600px;
 
@@ -46,9 +44,8 @@ const Test = styled.div`
 
   .menu a {
     text-decoration: none;
-    color: rgba(211,157,87);
+    color: rgba(211, 157, 87);
     font-family: fantasy;
-    
   }
 
   .menu {
@@ -69,22 +66,12 @@ const Test = styled.div`
     z-index: 2;
   }
 
- 
-  .header:hover 
-  
-  
-  .submenu {
+  .header:hover .submenu {
     visibility: inherit;
     justify-content: space-around;
   }
 
-  
-  
-    /* 사이드바 CSS */
-  
-
-
-   
+  /* 사이드바 CSS */
 `;
 
 const Sub = styled.div``;
